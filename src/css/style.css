@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+body {
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    background: url(../images/bg-desktop.svg) no-repeat center center var(--violet);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 1440px;
+    max-width: 100%;
+    margin-right: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 50px;
+    grid-template-areas:
+        "header header"
+        "image about"
+        ". footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.image {
+    grid-area: image;
+}
+
+.about {
+    grid-area: about;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.header .logo img {
+    margin: 30px 0 0 75px;
+    width: 180px;
+}
+
+.image img {
+    margin: 50px 0 0 78px;
+    width: auto;
+}
+
+.about {
+    width: 520px;
+    max-height: 360px;
+    position: relative;
+    top: 90px;
+}
+
+.about h2 {
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.about p {
+    padding-top: 20px;
+    line-height: 28px;
+}
+
+.about .btn-register {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: var(--violet);
+    padding: 15px 65px;
+    border-radius: 50px;
+    position: relative;
+    top: 36px;
+    transition: 0.3s;
+}
+
+.about .btn-register:hover {
+    background-color: var(--soft-magenta);
+    color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+}
+
+.footer .social-icons a .fa-facebook-f,
+.footer .social-icons a .fa-twitter,
+.footer .social-icons a .fa-instagram {
+    padding: 10px 10px;
+    margin: 6px;
+    width: 18px;
+    height: 18px;
+    border: #fff solid 1px;
+    border-radius: 50%;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer .social-icons a .fa-facebook-f:hover,
+.footer .social-icons a .fa-twitter:hover,
+.footer .social-icons a .fa-instagram:hover {
+    border: var(--soft-magenta) solid 1px;
+    color: var(--soft-magenta);
+}
